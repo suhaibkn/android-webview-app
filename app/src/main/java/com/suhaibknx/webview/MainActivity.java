@@ -1,5 +1,6 @@
 package com.suhaibknx.webview;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
@@ -10,6 +11,7 @@ public class MainActivity extends AppCompatActivity {
 
     WebView webview;
 
+    @SuppressLint("SetJavaScriptEnabled")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
