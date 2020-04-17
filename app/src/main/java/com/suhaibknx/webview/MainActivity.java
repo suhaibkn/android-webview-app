@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.WebView;
+import android.webkit.WebViewClient;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
         webview = findViewById(R.id.webview);
 
         //Load a URL on WebView
-        webview.loadUrl("https://".concat(getString(R.string.url)));
+        webview.loadUrl(getString(R.string.url));
 
         // Code to prevent long taps to select text to give more native feel to the app
         webview.setLongClickable(true);
@@ -31,10 +32,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        // Handling Page Navigation
+        // to open all pages in the same widget
+        webview.setWebViewClient(new WebViewClient());
+
         // Enable javascript
         webview.getSettings().setJavaScriptEnabled(true);
     }
-
 
 
     // For navigating back button presses
