@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">WebView</string>
-    <string name="url">http://covi19.in</string>
+    <string name="url">https://www.google.com</string>
 </resources>
