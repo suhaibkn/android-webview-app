@@ -28,6 +28,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             }
         });
+
+        // Enable javascript
+        webview.getSettings().setJavaScriptEnabled(true);
     }
 
 }
