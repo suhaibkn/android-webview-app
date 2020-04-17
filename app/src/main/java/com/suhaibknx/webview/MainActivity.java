@@ -7,7 +7,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    String loadURL = "https://www.google.com";
     WebView webview;
 
     @Override
@@ -18,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         webview = findViewById(R.id.webview);
 
         //Load a URL on WebView
-        webview.loadUrl(this.loadURL);
+        webview.loadUrl("https://".concat(getString(R.string.url)));
     }
 
 }
